@@ -18,56 +18,39 @@
   <!--header-->
   <header>
     <!--menu-->
-
-    <nav class="navbar navbar-dark bg-dark ">
+    <nav class="navbar navbar-expand-lg  bg-dark border-bottom border-body" data-bs-theme="dark">
       <div class="container-fluid">
-        <!--logo duck-->
         <a class="navbar-brand" href="#">
-          <img src="./img/duck.png" alt="duck" width="55" height="55">
+          <img id="logo" src="./img/duck.png">
         </a>
-        <!--hamburger menu-->
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas offcanvas-end text-bg-dark " tabindex="-1" id="offcanvasDarkNavbar"
-          aria-labelledby="offcanvasDarkNavbarLabel">
-
-          <div class="offcanvas-header d-lg-block">
-            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Catalogo libri</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-              aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end ">
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#">Anagrafica Utenti</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Storico Prestiti</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Help</a>
-              </li>
-            </ul>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Catalogo Libri</a>
             </li>
-            </ul>
-            <form class="d-flex mt-3" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button class="btn btn-success" type="submit">Search</button>
-            </form>
-          </div>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Anagrafica Utenti</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">Storico Prestiti</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Help</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+              data-bs-theme="light" />
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
         </div>
       </div>
     </nav>
+
 
   </header>
   <!--fine header-->
@@ -76,11 +59,15 @@
 
   <div class="container-sm pt-3 pb-3">
     <div class="row">
-      <div class="col-6">
-        <h2>Catalogo Libri</h2>
-      </div>
-      <div class="col-6 text-end">
-        <a href="#" class="btn btn-primary">Aggiungi Libro</a>
+      <div class="col-12 col-lg-8">
+        <div class="d-flex justify-content-between">
+          <div>
+            <h2>Catalogo Libri</h2>
+          </div>
+          <div>
+            <a href="#" class="btn btn-primary">Aggiungi Libro</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -222,33 +209,36 @@
 
   <!--tabella todo e F.A.Q.-->
 
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div>
-          <h3>Todo</h3>
-          <ul class="list-group">
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-              <label class="form-check-label" for="firstCheckbox">Chiamare segreteria</label>
-            </li>
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-              <label class="form-check-label" for="secondCheckbox">Mandare avvisi prestiti scaduti</label>
-            </li>
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-              <label class="form-check-label" for="thirdCheckbox">Ordinare nuovi libri</label>
-            </li>
-          </ul>
+  <div class="col-12 col-lg-4">
+    <div class="card">
+      <div class="card-header">
+        <h2>Todo</h2>
+      </div>
+      <div class="card-body">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+            <label class="form-check-label" for="firstCheckbox">Chiamare segreteria</label>
+          </li>
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+            <label class="form-check-label" for="secondCheckbox">Mandare avvisi prestiti scaduti</label>
+          </li>
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+            <label class="form-check-label" for="thirdCheckbox">Ordinare nuovi libri</label>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-        </div>
-
-
-        <!--tabella F.A.Q.-->
-
-        <div class="col-12">
-          <h3>F.A.Q.</h3>
+    <!--tabella F.A.Q.-->
+    <div class="card">
+      <div class="card-header">
+        <h2>F.A.Q.</h2>
+      </div>
+      <div class="card-body">
+        <div class="col-12 col-lg-4">
           <div class="accordion" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -258,7 +248,7 @@
                   Come aggiungere un nuovo libro?
                 </button>
               </h2>
-              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse ">
                 <div class="accordion-body">
 
                 </div>
@@ -294,6 +284,7 @@
             </div>
           </div>
         </div>
+
 
 
 
